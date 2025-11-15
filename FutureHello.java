@@ -47,8 +47,8 @@ class MyCallable implements Callable<Long> {
 
 //classe do método main
 public class FutureHello  {
-  private static final int N = 10000;
-  private static final int NTHREADS = 10;
+  private static final int N = 10000000;
+  private static final int NTHREADS = 8;
 
   public static void main(String[] args) {
     //cria um pool de threads (NTHREADS)
@@ -77,7 +77,7 @@ public class FutureHello  {
         e.printStackTrace();
       }
     }
-    System.out.println("Quantidade de primos entre 1 e N: " + sum);
+    System.out.printf("Quantidade de primos entre 1 e %d: %d\n", N ,sum);
     executor.shutdown();
   }
 }
